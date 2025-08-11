@@ -1,0 +1,142 @@
+{
+  "colorPalette": {
+    "lightGreen": {
+      "hex": "#B8DBB3",
+      "rgb": [184, 219, 179],
+      "name": "Light Green"
+    },
+    "mediumGreen": {
+      "hex": "#72B063",
+      "rgb": [114, 176, 99],
+      "name": "Medium Green"
+    },
+    "blueGray": {
+      "hex": "#719AAC",
+      "rgb": [113, 154, 172],
+      "name": "Blue Gray"
+    },
+    "orange": {
+      "hex": "#E29135",
+      "rgb": [226, 145, 53],
+      "name": "Orange"
+    },
+    "lightBlue": {
+      "hex": "#94C6CD",
+      "rgb": [148, 198, 205],
+      "name": "Light Blue"
+    },
+    "darkBlue": {
+      "hex": "#4A5F7E",
+      "rgb": [74, 95, 126],
+      "name": "Dark Blue"
+    }
+  },
+  "clockSchemes": {
+    "default": {
+      "name": "Natural Balance",
+      "description": "A harmonious blend emphasizing the natural green tones",
+      "components": {
+        "face": "#B8DBB3",
+        "border": "#4A5F7E",
+        "numbers": "#4A5F7E",
+        "hourHand": "#E29135",
+        "minuteHand": "#72B063",
+        "secondHand": "#E29135",
+        "centerDot": "#4A5F7E",
+        "tickMarks": "#719AAC",
+        "shadow": "rgba(74, 95, 126, 0.3)"
+      }
+    },
+    "ocean": {
+      "name": "Ocean Breeze",
+      "description": "Cool blues and greens reminiscent of ocean waves",
+      "components": {
+        "face": "#94C6CD",
+        "border": "#4A5F7E",
+        "numbers": "#4A5F7E",
+        "hourHand": "#719AAC",
+        "minuteHand": "#72B063",
+        "secondHand": "#E29135",
+        "centerDot": "#4A5F7E",
+        "tickMarks": "#719AAC",
+        "shadow": "rgba(74, 95, 126, 0.3)"
+      }
+    },
+    "forest": {
+      "name": "Forest Canopy",
+      "description": "Rich greens with natural earth tones",
+      "components": {
+        "face": "#B8DBB3",
+        "border": "#72B063",
+        "numbers": "#4A5F7E",
+        "hourHand": "#E29135",
+        "minuteHand": "#719AAC",
+        "secondHand": "#E29135",
+        "centerDot": "#4A5F7E",
+        "tickMarks": "#719AAC",
+        "shadow": "rgba(114, 176, 99, 0.3)"
+      }
+    },
+    "sunset": {
+      "name": "Sunset Glow",
+      "description": "Warm gradient with vibrant accent colors",
+      "components": {
+        "face": "linear-gradient(135deg, #94C6CD, #E29135)",
+        "border": "#4A5F7E",
+        "numbers": "#4A5F7E",
+        "hourHand": "#72B063",
+        "minuteHand": "#719AAC",
+        "secondHand": "#E29135",
+        "centerDot": "#4A5F7E",
+        "tickMarks": "#719AAC",
+        "shadow": "rgba(74, 95, 126, 0.4)"
+      }
+    },
+    "contrast": {
+      "name": "High Contrast",
+      "description": "Maximum readability with strong color contrasts",
+      "components": {
+        "face": "#B8DBB3",
+        "border": "#4A5F7E",
+        "numbers": "#4A5F7E",
+        "hourHand": "#E29135",
+        "minuteHand": "#4A5F7E",
+        "secondHand": "#E29135",
+        "centerDot": "#4A5F7E",
+        "tickMarks": "#4A5F7E",
+        "shadow": "rgba(74, 95, 126, 0.5)"
+      }
+    },
+    "monochromatic": {
+      "name": "Blue Monochrome",
+      "description": "Elegant single-color family variation",
+      "components": {
+        "face": "#94C6CD",
+        "border": "#4A5F7E",
+        "numbers": "#4A5F7E",
+        "hourHand": "#719AAC",
+        "minuteHand": "#4A5F7E",
+        "secondHand": "#E29135",
+        "centerDot": "#4A5F7E",
+        "tickMarks": "#719AAC",
+        "shadow": "rgba(74, 95, 126, 0.3)"
+      }
+    }
+  },
+  "usageGuidelines": {
+    "accessibility": {
+      "contrastRatio": "All text and important elements maintain WCAG AA contrast ratios",
+      "colorBlindness": "Orange and blue combinations provide good visibility for most color vision types"
+    },
+    "themes": {
+      "light": "Use lighter backgrounds (lightGreen, lightBlue) for bright environments",
+      "balanced": "Default scheme works well in most lighting conditions",
+      "accent": "Orange provides strong accent color for important elements"
+    },
+    "implementation": {
+      "css": "Use CSS custom properties from clock-color-scheme.css",
+      "javascript": "Import JSON for programmatic color access",
+      "frameworks": "Colors work well with React, Vue, Angular component systems"
+    }
+  }
+}

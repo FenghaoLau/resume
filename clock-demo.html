@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时钟配色方案演示 - Clock Color Schemes Demo</title>
+    <link rel="stylesheet" href="clock-color-scheme.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--color-dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--color-blue-gray);
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .schemes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .scheme-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .scheme-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .scheme-title {
+            color: var(--color-dark-blue);
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .scheme-description {
+            color: var(--color-blue-gray);
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .clock-demo {
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .clock-demo .clock {
+            margin: 0 auto;
+        }
+
+        /* Animated clock hands */
+        .clock-hand.animated.hour {
+            animation: rotate-hour 43200s linear infinite;
+        }
+
+        .clock-hand.animated.minute {
+            animation: rotate-minute 3600s linear infinite;
+        }
+
+        .clock-hand.animated.second {
+            animation: rotate-second 60s linear infinite;
+        }
+
+        @keyframes rotate-hour {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotate-minute {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotate-second {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .color-palette {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        .palette-title {
+            color: var(--color-dark-blue);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .color-swatches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .color-swatch {
+            text-align: center;
+        }
+
+        .color-box {
+            width: 100%;
+            height: 80px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 2px solid var(--color-dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .color-info {
+            font-size: 0.85em;
+            color: var(--color-dark-blue);
+        }
+
+        .usage-notes {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        .usage-notes h3 {
+            color: var(--color-dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .usage-notes ul {
+            color: var(--color-blue-gray);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>时钟配色方案 Clock Color Schemes</h1>
+        <p class="subtitle">基于自然色彩调板的优雅时钟设计 - Elegant clock designs based on natural color palette</p>
+
+        <div class="schemes-grid">
+            <!-- Default Scheme -->
+            <div class="scheme-card">
+                <h3 class="scheme-title">自然平衡 Natural Balance</h3>
+                <p class="scheme-description">强调自然绿色调的和谐融合</p>
+                <div class="clock-demo">
+                    <div class="clock">
+                        <div class="clock-hand hour animated" style="top: 50px; left: 98px; transform: rotate(90deg);"></div>
+                        <div class="clock-hand minute animated" style="top: 40px; left: 98.5px; transform: rotate(180deg);"></div>
+                        <div class="clock-hand second animated" style="top: 30px; left: 99.5px; transform: rotate(270deg);"></div>
+                        <div class="clock-center"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ocean Scheme -->
+            <div class="scheme-card">
+                <h3 class="scheme-title">海洋微风 Ocean Breeze</h3>
+                <p class="scheme-description">让人联想到海浪的清凉蓝绿色</p>
+                <div class="clock-demo">
+                    <div class="clock ocean-theme">
+                        <div class="clock-hand hour animated" style="top: 50px; left: 98px; transform: rotate(45deg);"></div>
+                        <div class="clock-hand minute animated" style="top: 40px; left: 98.5px; transform: rotate(135deg);"></div>
+                        <div class="clock-hand second animated" style="top: 30px; left: 99.5px; transform: rotate(225deg);"></div>
+                        <div class="clock-center"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forest Scheme -->
+            <div class="scheme-card">
+                <h3 class="scheme-title">森林树冠 Forest Canopy</h3>
+                <p class="scheme-description">丰富的绿色与自然大地色调</p>
+                <div class="clock-demo">
+                    <div class="clock forest-theme">
+                        <div class="clock-hand hour animated" style="top: 50px; left: 98px; transform: rotate(135deg);"></div>
+                        <div class="clock-hand minute animated" style="top: 40px; left: 98.5px; transform: rotate(90deg);"></div>
+                        <div class="clock-hand second animated" style="top: 30px; left: 99.5px; transform: rotate(315deg);"></div>
+                        <div class="clock-center"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sunset Scheme -->
+            <div class="scheme-card">
+                <h3 class="scheme-title">夕阳辉光 Sunset Glow</h3>
+                <p class="scheme-description">温暖渐变与鲜艳强调色</p>
+                <div class="clock-demo">
+                    <div class="clock sunset-theme">
+                        <div class="clock-hand hour animated" style="top: 50px; left: 98px; transform: rotate(225deg);"></div>
+                        <div class="clock-hand minute animated" style="top: 40px; left: 98.5px; transform: rotate(45deg);"></div>
+                        <div class="clock-hand second animated" style="top: 30px; left: 99.5px; transform: rotate(180deg);"></div>
+                        <div class="clock-center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Palette Display -->
+        <div class="color-palette">
+            <h2 class="palette-title">原始调色板 Original Color Palette</h2>
+            <div class="color-swatches">
+                <div class="color-swatch">
+                    <div class="color-box" style="background-color: #B8DBB3;">浅绿</div>
+                    <div class="color-info">
+                        <strong>#B8DBB3</strong><br>
+                        RGB: 184, 219, 179
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background-color: #72B063;">中绿</div>
+                    <div class="color-info">
+                        <strong>#72B063</strong><br>
+                        RGB: 114, 176, 99
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background-color: #719AAC;">蓝灰</div>
+                    <div class="color-info">
+                        <strong>#719AAC</strong><br>
+                        RGB: 113, 154, 172
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background-color: #E29135;">橙色</div>
+                    <div class="color-info">
+                        <strong>#E29135</strong><br>
+                        RGB: 226, 145, 53
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background-color: #94C6CD;">浅蓝</div>
+                    <div class="color-info">
+                        <strong>#94C6CD</strong><br>
+                        RGB: 148, 198, 205
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background-color: #4A5F7E;">深蓝</div>
+                    <div class="color-info">
+                        <strong>#4A5F7E</strong><br>
+                        RGB: 74, 95, 126
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Guidelines -->
+        <div class="usage-notes">
+            <h3>使用指南 Usage Guidelines</h3>
+            <ul>
+                <li><strong>可访问性:</strong> 所有文本和重要元素保持 WCAG AA 对比度标准</li>
+                <li><strong>色盲友好:</strong> 橙色和蓝色组合为大多数色觉类型提供良好的可见性</li>
+                <li><strong>环境适应:</strong> 浅色背景适合明亮环境，默认方案适合大多数照明条件</li>
+                <li><strong>强调色:</strong> 橙色为重要元素提供强烈的强调色</li>
+                <li><strong>实现方式:</strong> 使用 CSS 自定义属性或 JSON 配置进行程序化访问</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Set current time on clocks
+        function setClockTime() {
+            const now = new Date();
+            const hours = now.getHours() % 12;
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const hourAngle = (hours * 30) + (minutes * 0.5); // 30 degrees per hour + minute offset
+            const minuteAngle = minutes * 6; // 6 degrees per minute
+            const secondAngle = seconds * 6; // 6 degrees per second
+
+            document.querySelectorAll('.clock-hand.hour').forEach(hand => {
+                hand.style.transform = `rotate(${hourAngle}deg)`;
+            });
+
+            document.querySelectorAll('.clock-hand.minute').forEach(hand => {
+                hand.style.transform = `rotate(${minuteAngle}deg)`;
+            });
+
+            document.querySelectorAll('.clock-hand.second').forEach(hand => {
+                hand.style.transform = `rotate(${secondAngle}deg)`;
+            });
+        }
+
+        // Update time every second
+        setClockTime();
+        setInterval(setClockTime, 1000);
+    </script>
+</body>
+</html>
