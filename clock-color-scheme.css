@@ -1,0 +1,184 @@
+/* Clock Color Scheme - Based on Nature-Inspired Palette */
+/* 
+ * Extracted from image with 6 harmonious colors:
+ * - Light Green, Medium Green, Blue-Gray, Orange, Light Blue, Dark Blue
+ */
+
+:root {
+  /* Primary Color Palette */
+  --color-light-green: #B8DBB3;    /* RGB: 184, 219, 179 */
+  --color-medium-green: #72B063;   /* RGB: 114, 176, 99 */
+  --color-blue-gray: #719AAC;      /* RGB: 113, 154, 172 */
+  --color-orange: #E29135;         /* RGB: 226, 145, 53 */
+  --color-light-blue: #94C6CD;     /* RGB: 148, 198, 205 */
+  --color-dark-blue: #4A5F7E;      /* RGB: 74, 95, 126 */
+
+  /* Clock Component Colors */
+  --clock-face-bg: var(--color-light-green);
+  --clock-face-border: var(--color-dark-blue);
+  --clock-numbers: var(--color-dark-blue);
+  --clock-hour-hand: var(--color-orange);
+  --clock-minute-hand: var(--color-medium-green);
+  --clock-second-hand: var(--color-orange);
+  --clock-center-dot: var(--color-dark-blue);
+  --clock-tick-marks: var(--color-blue-gray);
+  --clock-shadow: rgba(74, 95, 126, 0.3);
+
+  /* Alternative Color Schemes */
+  
+  /* Scheme 1: Ocean Theme */
+  --clock-ocean-face: var(--color-light-blue);
+  --clock-ocean-border: var(--color-dark-blue);
+  --clock-ocean-numbers: var(--color-dark-blue);
+  --clock-ocean-hour-hand: var(--color-blue-gray);
+  --clock-ocean-minute-hand: var(--color-medium-green);
+  --clock-ocean-second-hand: var(--color-orange);
+
+  /* Scheme 2: Forest Theme */
+  --clock-forest-face: var(--color-light-green);
+  --clock-forest-border: var(--color-medium-green);
+  --clock-forest-numbers: var(--color-dark-blue);
+  --clock-forest-hour-hand: var(--color-orange);
+  --clock-forest-minute-hand: var(--color-blue-gray);
+  --clock-forest-second-hand: var(--color-orange);
+
+  /* Scheme 3: Sunset Theme */
+  --clock-sunset-face: linear-gradient(135deg, var(--color-light-blue), var(--color-orange));
+  --clock-sunset-border: var(--color-dark-blue);
+  --clock-sunset-numbers: var(--color-dark-blue);
+  --clock-sunset-hour-hand: var(--color-medium-green);
+  --clock-sunset-minute-hand: var(--color-blue-gray);
+  --clock-sunset-second-hand: var(--color-orange);
+}
+
+/* Clock Base Styles */
+.clock {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--clock-face-bg);
+  border: 4px solid var(--clock-face-border);
+  position: relative;
+  box-shadow: 0 4px 20px var(--clock-shadow);
+}
+
+.clock-numbers {
+  color: var(--clock-numbers);
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.clock-hand {
+  position: absolute;
+  transform-origin: bottom center;
+  border-radius: 2px;
+}
+
+.clock-hand.hour {
+  background: var(--clock-hour-hand);
+  width: 4px;
+  height: 60px;
+}
+
+.clock-hand.minute {
+  background: var(--clock-minute-hand);
+  width: 3px;
+  height: 80px;
+}
+
+.clock-hand.second {
+  background: var(--clock-second-hand);
+  width: 1px;
+  height: 90px;
+}
+
+.clock-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: var(--clock-center-dot);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.clock-tick {
+  background: var(--clock-tick-marks);
+  position: absolute;
+}
+
+.clock-tick.hour-tick {
+  width: 3px;
+  height: 15px;
+}
+
+.clock-tick.minute-tick {
+  width: 1px;
+  height: 8px;
+}
+
+/* Alternative Theme Classes */
+.clock.ocean-theme {
+  background: var(--clock-ocean-face);
+  border-color: var(--clock-ocean-border);
+}
+
+.clock.ocean-theme .clock-numbers {
+  color: var(--clock-ocean-numbers);
+}
+
+.clock.ocean-theme .clock-hand.hour {
+  background: var(--clock-ocean-hour-hand);
+}
+
+.clock.ocean-theme .clock-hand.minute {
+  background: var(--clock-ocean-minute-hand);
+}
+
+.clock.ocean-theme .clock-hand.second {
+  background: var(--clock-ocean-second-hand);
+}
+
+.clock.forest-theme {
+  background: var(--clock-forest-face);
+  border-color: var(--clock-forest-border);
+}
+
+.clock.forest-theme .clock-numbers {
+  color: var(--clock-forest-numbers);
+}
+
+.clock.forest-theme .clock-hand.hour {
+  background: var(--clock-forest-hour-hand);
+}
+
+.clock.forest-theme .clock-hand.minute {
+  background: var(--clock-forest-minute-hand);
+}
+
+.clock.forest-theme .clock-hand.second {
+  background: var(--clock-forest-second-hand);
+}
+
+.clock.sunset-theme {
+  background: var(--clock-sunset-face);
+  border-color: var(--clock-sunset-border);
+}
+
+.clock.sunset-theme .clock-numbers {
+  color: var(--clock-sunset-numbers);
+}
+
+.clock.sunset-theme .clock-hand.hour {
+  background: var(--clock-sunset-hour-hand);
+}
+
+.clock.sunset-theme .clock-hand.minute {
+  background: var(--clock-sunset-minute-hand);
+}
+
+.clock.sunset-theme .clock-hand.second {
+  background: var(--clock-sunset-second-hand);
+}
